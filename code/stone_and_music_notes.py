@@ -5,7 +5,7 @@
 #
 
 # Outer dictionary(colour names) containing inner dictionaries(colour facts)
-colour_notes = {'violet':{'Matching Stone':'Amethyst',
+colour_facts = {'violet':{'Matching Stone':'Amethyst',
                           'Matching Music note':'B',
                           'Matching Emotion':'Bravery'},
 
@@ -36,7 +36,6 @@ colour_notes = {'violet':{'Matching Stone':'Amethyst',
 # Function to check whether user has entered a colour that is available in the dictionary
 def get_colour_facts(colour):
     colour = colour.lower()
-    if colour not in colour_notes:
+    if colour not in colour_facts:
         raise ValueError(f'Colour {colour} is not available to obtain facts')
-    return colour_notes[colour]
-
+    return colour_facts[colour]
