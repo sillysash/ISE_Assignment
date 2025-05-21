@@ -33,7 +33,7 @@ def main():
             print(f'\nInvalid choice {choice}. Please choose from the options available (1-8)\n')
             
         match choice:
-             case 1:
+             case '1':
                 print(f'{BOLD}\nOption 1 selected!{RESET}\n')
                 while True:
                     colour_choice = input('Enter a colour available in the visible light spectrum range (violet, blue, cyan, green, yellow, orange, red): ')
@@ -45,7 +45,7 @@ def main():
                     except ValueError:
                         print('\nColour frequency not found! Please enter an available colour\n')
 
-             case 2:
+             case '2':
                 print(F'{BOLD}\nOption 2 selected!{RESET}\n')
                 while True:
                     try:
@@ -59,7 +59,7 @@ def main():
                     except ValueError:
                         print('\nInvalid input! Please enter a valid frequency\n')
                         
-             case 3:
+             case '3':
                 print(F'{BOLD}\nOption 3 selected!{RESET}\n')
 
                 while True:
@@ -74,7 +74,7 @@ def main():
                     except ValueError:
                         print('\nInvalid input! Please enter a valid wavelength\n')
                          
-             case 4:
+             case '4':
                 print(F'{BOLD}\nOption 4 selected!{RESET}\n')
 
                 while True:
@@ -97,7 +97,7 @@ def main():
                     except ValueError:
                         print('\nInvalid input! Please input a valid frequency\n')
                         
-             case 5:  
+             case '5':  
                 print(F'{BOLD}\nOption 5 selected!{RESET}\n')
 
                 while True:
@@ -110,7 +110,7 @@ def main():
                     except ValueError:
                         print('\nInvalid input! Please enter a valid frequency\n') 
                 
-             case 6:
+             case '6':
                 print(f'{BOLD}\nOption 6 selected!{RESET}\n')
                 print('Enter two frequency values to compare their colour(s)(400-790THz)')
 
@@ -126,7 +126,7 @@ def main():
                         except ValueError:
                             print('\nInvalid input! Please enter two valid frequencies\n')
 
-             case 7:
+             case '7':
                 print(f'{BOLD}\nOption 7 selected!{RESET}\n')
                 print(f'\n COLOUR ANALYSIS\n')
                 print('These are the following colours available: violet, blue, cyan, green, yellow, orange, red')
@@ -146,7 +146,7 @@ def main():
                         except ValueError:    
                             print('\nUnavailable colour option! Please try again\n')
 
-             case 8:
+             case '8':
                 print('Thank you for participating! Farewell!')
                 break 
 
