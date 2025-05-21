@@ -66,7 +66,7 @@ def main():
                     try:
                         wavelength_value = int(input('Enter a wavelength value in nm to calculate its frequency(1-7,499): '))
                         if (0 < wavelength_value < 7500):
-                            print(f'Wavelength is: {calculate_freq_of_wavelength(wavelength_value)}THz')
+                            print(f'Frequency is: {calculate_freq_of_wavelength(wavelength_value)}THz')
                             break
                         else:
                             print('\nOut of bound! Please enter a wavelength value between 0 and 7500\n')
