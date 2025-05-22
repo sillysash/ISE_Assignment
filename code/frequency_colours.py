@@ -22,7 +22,7 @@ def get_colour_freq(colour):
         raise ValueError(f'Unavailable colour: {colour}')     # Raises an error if the user has input an invalid colour choice
     return colour_freq_bounds[colour]
 
-# Function to ifnd and return colour produced by frequency given by user
+# Function to find and return colour produced by frequency given by user
 def freq_colours(freq_value):
     if freq_value < min_visible_light:
         return 'Frequency value is below the Visible Light range (lower than frequency of Red)'
@@ -48,7 +48,7 @@ def compare_two_freq(freq_val1, freq_val2):
     val2_visible = get_visible_colours(freq_val2)
 
     if not val1_visible and not val2_visible:
-        return (f'Neither frequency is visible: {freq_val1}THz, {freq_val2}THz')
+        return (f'Neither frequencies are visible: {freq_val1}THz, {freq_val2}THz')
     if not val1_visible:
         return (f'Frequency {freq_val1}THz is not within the Visible Light range')
     if not val2_visible:
@@ -62,6 +62,3 @@ def compare_two_freq(freq_val1, freq_val2):
         return 'Both frequencies represent the same colour'
     else:
         return 'Both frequencies represent different colours'
-
-    
-    
