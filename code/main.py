@@ -49,12 +49,12 @@ def main():
                 print(F'{BOLD}\nOption 2 selected!{RESET}\n')
                 while True:
                     try:
-                        freq_value = int(input('Enter a frequency value in THz to calculate its wavelength(1-39,999): '))
-                        if (0 < freq_value < 40000):
+                        freq_value = int(input('Enter a frequency value in THz to calculate its wavelength(1-40000): '))
+                        if (1 <= freq_value <= 40000):
                             print(f'Wavelength is: {calculate_wavelength_of_freq(freq_value)}nm')
                             break
                         else:
-                            print('\nInvalid frequency! Out of bound. Please enter a frequency value between 1 and 39,999: \n')
+                            print('\nInvalid frequency! Out of bound. Please enter a frequency value between 1 and 40000: \n')
 
                     except ValueError:
                         print('\nInvalid input! Please enter a valid frequency\n')
@@ -64,12 +64,12 @@ def main():
 
                 while True:
                     try:
-                        wavelength_value = int(input('Enter a wavelength value in nm to calculate its frequency(1-7,499): '))
-                        if (0 < wavelength_value < 7500):
+                        wavelength_value = int(input('Enter a wavelength value in nm to calculate its frequency(1-7500): '))
+                        if (1 <= wavelength_value <= 7500):
                             print(f'Frequency is: {calculate_freq_of_wavelength(wavelength_value)}THz')
                             break
                         else:
-                            print('\nOut of bound! Please enter a wavelength value between 0 and 7500\n')
+                            print('\nOut of bound! Please enter a wavelength value between 1 and 7500\n')
 
                     except ValueError:
                         print('\nInvalid input! Please enter a valid wavelength\n')
@@ -79,10 +79,10 @@ def main():
 
                 while True:
                     try:
-                        freq_in_THz = int(input('Enter a frequency value in THz to find if it is within the Visible Light, IR and UV range or not(1-39,999): '))
+                        freq_in_THz = int(input('Enter a frequency value in THz to find if it is within the Visible Light, IR and UV range or not(1-40000): '))
 
-                        if freq_in_THz <= 0 or freq_in_THz >= 40000:
-                                print('\nInvalid frequency! Frequency must be between 1 and 39,999THz range\n')
+                        if freq_in_THz < 1 or freq_in_THz > 40000:
+                                print('\nInvalid frequency! Frequency must be between 1 and 40000THz range\n')
                         else:
                             if freq_in_THz >= 400 and freq_in_THz <= 790:
                                 print(f'{freq_in_THz}THz is in the {BOLD}Visible Light{RESET} range')
