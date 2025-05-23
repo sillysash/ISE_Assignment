@@ -39,7 +39,7 @@ def main():
                     colour_choice = input('Enter a colour available in the visible light spectrum range (violet, blue, cyan, green, yellow, orange, red): ')
                     try:
                         lower_bound, upper_bound = get_colour_freq(colour_choice)
-                        print(f'Frequency bounds for {colour_choice} is: {lower_bound}THz to {upper_bound}THz')
+                        print(f'Frequency bounds for {colour_choice} are: {lower_bound}THz to {upper_bound}THz')
                         break    # Exit loop after valid input and process
 
                     except ValueError:
@@ -54,7 +54,7 @@ def main():
                             print(f'Wavelength is: {calculate_wavelength_of_freq(freq_value)}nm')
                             break
                         else:
-                            print('\nInvalid frequency! Out of bound. Please enter a frequency value between 1 and 40000: \n')
+                            print('\nInvalid frequency! Out of bound! Please enter a frequency value between 1 and 40000 \n')
 
                     except ValueError:
                         print('\nInvalid input! Please enter a valid frequency\n')
@@ -120,7 +120,7 @@ def main():
                             freq_val2 = int(input('Second frequency value: '))
 
                             comparison = compare_two_freq(freq_val1, freq_val2)
-                            print('Comparison results are:\n', comparison)
+                            print('\nComparison results are:\n', comparison)
                             break
 
                         except ValueError:
