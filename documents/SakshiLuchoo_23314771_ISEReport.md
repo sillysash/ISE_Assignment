@@ -349,7 +349,7 @@ if __name__ == '__main__':
 It was fixed by changing the code structure (use of a class to create methods instead of independent functions)
 
 #### **Test results after correcting test error:**
-![Sample Output](test_output.png)
+![Sample Output](test_output.jpg)
 
 ---
 
